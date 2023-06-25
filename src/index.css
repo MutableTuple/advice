@@ -1,13 +1,115 @@
+* {
+  color: white;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(332deg, #21d4fd 0%, #b721ff 100%);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 2s ease infinite;
+  -moz-animation: AnimationName 2s ease infinite;
+  animation: AnimationName 2s ease infinite;
+
+  /* background: #ffffe0; */
+  -webkit-animation: anim 30s ease infinite;
+  -moz-animation: anim2 30s ease infinite;
+  animation: anim3 30s ease infinite;
+}
+.container {
+  width: 70vw;
+  /* background: #f5f5dc; */
+  padding: 20px;
+  text-align: center;
+}
+.advice-text {
+  font-weight: 200;
+  font-size: 2.2rem;
+}
+
+.advice-btn {
+  width: fit-content;
+  padding: 10px;
+  background-color: transparent;
+  /* border-radius: 10px; */
+  border: 1px solid rgb(255, 255, 255);
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+}
+.num-ad {
+  font-weight: 300;
+  color: white;
+
+  font-size: 1.2rem;
+}
+.advice-btn:active {
+  box-shadow: none;
+}
+.advice-btn:hover {
+  transition: 0.2s;
+}
+
+.eegg-ip {
+  margin-top: 50px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  height: 30px;
+}
+.logo-img {
+  width: 150px;
+  height: 150px;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes anim2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anim3 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
