@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function App() {
   const [advice, setAdvice] = useState("");
@@ -17,9 +18,17 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1 className="advice-text">"{advice}"</h1>
+      <motion.h1
+        className="advice-text"
+        key={advice} // Ensure animation triggers on text change
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      >
+        "{advice}"
+      </motion.h1>
       <button onClick={getAdvice} className="advice-btn">
-        get another advice
+        Get another advice
       </button>
       <Message count={count - 1} />
     </div>
@@ -29,7 +38,7 @@ export default function App() {
 function Message(props) {
   return (
     <p className="num-ad">
-      You have read <strong>{props.count}</strong> peices of advice!
+      You have read <strong>{props.count}</strong> pieces of advice!
     </p>
   );
 }
